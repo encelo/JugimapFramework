@@ -763,9 +763,9 @@ void DrawerNC::Dot(Vec2f p)
 //===================================================================================================
 
 
-void MapNCNode::visit(ncine::RenderQueue &renderQueue)
+void MapNCNode::visit(ncine::RenderQueue &renderQueue, unsigned int &visitOrderIndex)
 {
-    ncine::SceneNode::visit(renderQueue);
+    ncine::SceneNode::visit(renderQueue, visitOrderIndex);
 
 }
 

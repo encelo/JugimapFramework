@@ -294,7 +294,7 @@ class MapNCNode : public ncine::SceneNode
 public:
     explicit MapNCNode(MapNC * _map) : SceneNode() { map = _map;}
 
-    virtual void visit(ncine::RenderQueue &renderQueue) override;
+    virtual void visit(ncine::RenderQueue &renderQueue, unsigned int &visitOrderIndex) override;
 
 private:
     MapNC * map = nullptr;                  // LINK
