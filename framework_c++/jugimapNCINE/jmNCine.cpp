@@ -779,9 +779,8 @@ void MapNC::InitEngineObjects(MapType _mapType)
     mMapNCNode = new MapNCNode(this);     // First create node as it will be used during sprite initialization!
     Map::InitEngineObjects(_mapType);
 
-    ncine::Viewport &rootViewport = ncine::theApplication().rootViewport();
-    mViewport.setNextViewport(rootViewport.nextViewport());
-    rootViewport.setNextViewport(&mViewport);
+    ncine::Viewport &screenViewport = ncine::theApplication().screenViewport();
+    ncine::Viewport::chain().insertAt(0, &mViewport);
     mViewport.setCamera(&mCamera);
     mViewport.setRootNode(mMapNCNode);
 

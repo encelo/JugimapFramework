@@ -61,7 +61,7 @@ void MyEventHandler::onInit()
 
     ncine::theApplication().setAutoSuspension(true);
 
-     ncine::theApplication().rootViewport().setClearColor (0.13333, 0.13333, 0.13333, 1.0);
+     ncine::theApplication().screenViewport().setClearColor (0.13333, 0.13333, 0.13333, 1.0);
 
     // JUGIMAP CORE INITIALIZATION
     //---------------------------------------------------
