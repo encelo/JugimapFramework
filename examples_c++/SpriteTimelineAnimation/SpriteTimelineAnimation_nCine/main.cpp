@@ -45,7 +45,7 @@ void MyEventHandler::onPreInit(ncine::AppConfiguration &config)
     config.windowTitle = nctl::String(appName.c_str());      // jugimapAppName must be a global variable
     config.deferShaderQueries = false;
     config.withVSync = true;
-    config.isResizable = false;
+    config.resizable = false;
     //config.withDebugOverlay = true;
     //config.withGlDebugContext = true;
 }
