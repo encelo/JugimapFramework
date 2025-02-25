@@ -95,7 +95,7 @@ void MyEventHandler::onFrameStart()
         return ;
     }
 
-    jugiApp::application->Update(ncine::theApplication().interval());
+    jugiApp::application->Update(ncine::theApplication().frameTime());
 }
 
 
@@ -174,13 +174,13 @@ void MyEventHandler::onTouchMove(const ncine::TouchEvent &event)
 
 void MyEventHandler::onMouseButtonPressed(const ncine::MouseEvent &event)
 {
-    if(event.isLeftButton()){
+    if(event.button == ncine::MouseButton::LEFT){
         jugimap::mouse._SetButtonState(jugimap::MouseButton::LEFT, true);
 
-    }else if(event.isMiddleButton()){
+    }else if(event.button == ncine::MouseButton::MIDDLE){
         jugimap::mouse._SetButtonState(jugimap::MouseButton::MIDDLE, true);
 
-    }else if(event.isRightButton()){
+    }else if(event.button == ncine::MouseButton::RIGHT){
         jugimap::mouse._SetButtonState(jugimap::MouseButton::RIGHT, true);
 
     }
@@ -189,13 +189,13 @@ void MyEventHandler::onMouseButtonPressed(const ncine::MouseEvent &event)
 
 void MyEventHandler::onMouseButtonReleased(const ncine::MouseEvent &event)
 {
-    if(event.isLeftButton()){
+    if(event.button == ncine::MouseButton::LEFT){
         jugimap::mouse._SetButtonState(jugimap::MouseButton::LEFT, false);
 
-    }else if(event.isMiddleButton()){
+    }else if(event.button == ncine::MouseButton::MIDDLE){
         jugimap::mouse._SetButtonState(jugimap::MouseButton::MIDDLE, false);
 
-    }else if(event.isRightButton()){
+    }else if(event.button == ncine::MouseButton::RIGHT){
         jugimap::mouse._SetButtonState(jugimap::MouseButton::RIGHT, false);
     }
 }
