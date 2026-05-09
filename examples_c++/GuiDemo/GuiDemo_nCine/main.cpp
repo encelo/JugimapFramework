@@ -42,15 +42,15 @@ void MyEventHandler::onPreInit(ncine::AppConfiguration &config)
 #endif
 
 
-    config.resolution.set(1300, 800);
-    //config.resolution.set(1920, 1080);
+    config.window.resolution.set(1300, 800);
+    //config.window.resolution.set(1920, 1080);
     std::string appName = jugiApp::jugimapAppName + " - nCine version";
-    config.windowTitle = nctl::String(appName.c_str());      // jugimapAppName must be a global variable
-    config.deferShaderQueries = false;
-    config.withVSync = true;
-    config.resizable = false;
-    //config.withDebugOverlay = true;
-    //config.withGlDebugContext = true;
+    config.window.title = nctl::String(appName.c_str());      // jugimapAppName must be a global variable
+    config.graphics.opengl.deferShaderQueries = false;
+    config.graphics.vsync = true;
+    config.window.resizable = false;
+    //config.features.debugOverlay = true;
+    //config.graphics.opengl.debugContext = true;
 
 
 }
